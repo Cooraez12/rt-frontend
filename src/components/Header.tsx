@@ -23,11 +23,13 @@ export default function Header() {
           />
         </div>
       </div>
+
       <div className="flex items-center gap-3">
         <button className="relative p-2 rounded-xl hover:bg-rt-bg transition-colors">
           <Bell className="w-5 h-5 text-rt-muted" />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-rt-accent rounded-full" />
         </button>
+
         <div className="flex items-center gap-3 pl-3 border-l border-rt-border">
           <div className="w-8 h-8 rounded-full bg-rt-accent/10 flex items-center justify-center">
             <User className="w-4 h-4 text-rt-accent" />

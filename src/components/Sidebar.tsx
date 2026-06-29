@@ -31,6 +31,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 bg-rt-dark flex flex-col h-screen shrink-0">
+      {/* Logo */}
       <div className="p-6 flex items-center gap-3">
         <div className="w-9 h-9 rounded-xl bg-rt-accent flex items-center justify-center">
           <Zap className="w-5 h-5 text-white" />
@@ -40,6 +41,8 @@ export default function Sidebar() {
           <p className="text-slate-500 text-xs">Business</p>
         </div>
       </div>
+
+      {/* Navigation */}
       <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
         {navItems.map((item) => {
           const Icon = item.icon
@@ -57,8 +60,13 @@ export default function Sidebar() {
           )
         })}
       </nav>
+
+      {/* Bottom */}
       <div className="p-4 border-t border-white/5">
-        <NavLink to="/help" className="rt-sidebar-item">
+        <NavLink
+          to="/help"
+          className="rt-sidebar-item"
+        >
           <HelpCircle className="w-5 h-5" />
           <span>Help & Support</span>
         </NavLink>
