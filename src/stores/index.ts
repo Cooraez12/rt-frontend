@@ -18,7 +18,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     businessId: 'biz_123',
   },
   isAuthenticated: true,
-  login: async (email, _password) => {
+  login: async (email: string, _password: string) => {
     set({
       user: {
         id: 'usr_123',
