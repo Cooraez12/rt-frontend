@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+  }
+}
+
+@layer components {
+  .rt-card {
+    @apply bg-white rounded-2xl border border-rt-border shadow-sm;
+  }
+  .rt-card-hover {
+    @apply bg-white rounded-2xl border border-rt-border shadow-sm transition-all duration-200 hover:shadow-md hover:border-rt-accent/20;
+  }
+  .rt-btn-primary {
+    @apply bg-rt-accent text-white font-medium px-6 py-3 rounded-xl hover:bg-rt-accentHover transition-colors duration-200 flex items-center gap-2 justify-center;
+  }
+  .rt-btn-secondary {
+    @apply bg-white text-rt-text font-medium px-6 py-3 rounded-xl border border-rt-border hover:bg-rt-bg transition-colors duration-200 flex items-center gap-2 justify-center;
+  }
+  .rt-btn-ghost {
+    @apply text-rt-muted font-medium px-4 py-2 rounded-xl hover:bg-rt-bg transition-colors duration-200;
+  }
+  .rt-input {
+    @apply w-full px-4 py-3 rounded-xl border border-rt-border bg-white text-rt-text placeholder-rt-muted focus:outline-none focus:ring-2 focus:ring-rt-accent/30 focus:border-rt-accent transition-all duration-200;
+  }
+  .rt-label {
+    @apply block text-sm font-medium text-rt-muted mb-1.5;
+  }
+  .rt-sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-slate-400 transition-all duration-200 hover:text-white hover:bg-white/5;
+  }
+  .rt-sidebar-item-active {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium bg-rt-accent text-white shadow-lg shadow-rt-accent/20;
+  }
+  .rt-status-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .rt-status-available { @apply bg-green-50 text-green-700 border border-green-200; }
+  .rt-status-pending { @apply bg-yellow-50 text-yellow-700 border border-yellow-200; }
+  .rt-status-processing { @apply bg-blue-50 text-blue-700 border border-blue-200; }
+  .rt-status-failed { @apply bg-red-50 text-red-700 border border-red-200; }
+  .rt-status-hold { @apply bg-slate-50 text-slate-700 border border-slate-200; }
+  .rt-status-reserved { @apply bg-purple-50 text-purple-700 border border-purple-200; }
+  .rt-gradient-text {
+    @apply bg-gradient-to-r from-rt-accent to-rt-secondary bg-clip-text text-transparent;
+  }
+  .rt-hero-gradient {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+  }
+}
